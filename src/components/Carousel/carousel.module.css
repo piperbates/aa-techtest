@@ -1,0 +1,19 @@
+.carousel {
+    text-align: left;
+}
+
+.carousel h2 {
+    color: blue;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.carousel h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.carouselScroll {
+    display: flex;
+}

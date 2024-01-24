@@ -1,0 +1,25 @@
+.infobox {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+
+
+}
+
+.infoBoxIcon {
+    position: relative;
+    width: 45px; height: 45px;
+    margin-bottom: 20px;
+}
+
+.infobox h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px
+}
+
+.infobox p {
+    color: #696969;
+}

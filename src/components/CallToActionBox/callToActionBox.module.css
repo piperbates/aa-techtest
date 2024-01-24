@@ -1,0 +1,21 @@
+.callToActionBox {
+    padding: 40px 36px;
+
+}
+
+.callToActionBox h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.callToActionBox p {
+    font-size: 16px;
+    color: #696969;
+    line-height: 1.5;
+}
+
+.callToActionImg {
+    position: relative;
+    width: 100px; height: 100px;
+}

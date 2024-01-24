@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./hero.module.css";
 import Image from "next/image";
 import trustScore from "@/assets/images/trustpilot.png"
+import BlueButton from "../blueButton";
 
 const FormBox = ({boxTitle, info, subText}: {boxTitle: string, info: string, subText?: string}) => 
     <div className={styles.formBox}>
@@ -50,9 +51,9 @@ const Hero = () => (
                 <FormBox boxTitle="Passangers" info="2 Adults, Any class" />         
             </div>
 
-            <button className={styles.formSubmit}>
-                <p>Search flights</p>
-            </button>
+            <BlueButton>
+                <span>Search flights</span>
+            </BlueButton>
         </div>
     </div>
 

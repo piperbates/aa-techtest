@@ -19,4 +19,4 @@ Look through all the designs and make a note of the components and any similarit
 Starting from a mobile first approach, design the page layouts for mobile, tablet, and desktop.
 
 4. 
-Continuing the mobile first approach, design the components
+Continuing the mobile first approach, design the components - started with the header and hero image working my way down the page until all components were created to mobile spec.

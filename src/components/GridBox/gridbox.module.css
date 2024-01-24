@@ -1,0 +1,64 @@
+.gridBox {
+    position: relative;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.gridBoxContent {
+    margin-bottom: 28px;
+}
+
+.gridBox h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.gridBox p {
+    font-size: 16px;
+    color: #696969;
+    line-height: 1.5;
+}
+
+.gridBoxGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+
+.gridBoxItem {
+    background-color: rgb(var(--background-rgb));
+    height: 100px;
+    margin: 4px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
+
+.gridBoxItem p {
+    font-size: 14px;
+}
+
+.gridBoxIcon {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.recommendedBox {
+    background: rgb(58, 185, 136);
+    width: 150px; height: 40px;
+    position: relative;
+    color: white;
+    border-radius: 0 0 16px 16px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
