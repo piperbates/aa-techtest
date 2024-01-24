@@ -1,0 +1,40 @@
+
+/* Desktop styles */
+.hamburger {
+    display: none;
+}
+
+.header {
+    width: 100%;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    padding: 32px 0;
+}
+
+.aaLogoWrapper {
+    position: relative;
+}
+
+.aaLogoWrapper {
+    width: 106px;
+    height: 32px;
+}
+
+/* Tablet */
+@media screen and (max-width: 1120px) {
+    .header {
+    justify-content: space-around;
+    }
+    
+    .hamburger {
+        position: relative;
+        width: 30px; 
+        height: 30px;
+        display:block;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {    
+}
