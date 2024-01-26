@@ -28,6 +28,17 @@ import blogs from "@/utils/blogs";
 import GridBox from "@/components/GridBox";
 
 export default function Home() {
+  const newBlogData = blogs.map((blog)=>{
+    if(blog.title.length > 54) {
+      return {
+        title: `${blog.title.slice(0, 54)}...`, 
+        category: blog.category, 
+        desktopImg: blog.desktopImg, 
+        mobileImg: blog.mobileImg  }
+    } else {
+      return blog
+    }
+  })
 
   const grid = [
     {
@@ -108,7 +119,7 @@ export default function Home() {
 
     <Section>
       <Carousel title="Blog" subtitle="Alternative adventures">
-        {blogs.map((blog, i)=>
+        {newBlogData.map((blog, i)=>
           <CarouselBox title={blog.title} content={blog.category} img={blog.mobileImg.src} key={i} />
         )}
       </Carousel>

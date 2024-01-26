@@ -16,4 +16,10 @@
 
 .carouselScroll {
     display: flex;
+    overflow-y: scroll;
+    gap: 16px;
+}
+
+.carouselScroll div {
+    width: 270px;
 }
