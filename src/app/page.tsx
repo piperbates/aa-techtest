@@ -98,6 +98,12 @@ export default function Home() {
       <CallToActionBox callToAction="Browse payment methods" image={service.src}>
         <h2>Buy now, pay later</h2>
         <p>Book your flights today and spread the cost over time with one of our installment options.</p>
+        <ul>
+          <li>Make payments weekly or monthly</li>
+          <li>Interest free options</li>
+          <li>Fast approval</li>
+        </ul>
+      
       </CallToActionBox>
     </Section>
 

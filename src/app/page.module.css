@@ -3,20 +3,29 @@
     color: rgb(var(--font-rgb))
   }
 
+  .container {
+    margin: 0 auto 100px auto;
+  }
+
 
 /* Tablet */
 
 @media screen and (min-width: 701px) and (max-width: 1120px) 
 {
-   
+    .container {
+        width: 740px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }  
 }
 
 
 /* Mobile */
 @media screen and (max-width: 700px) {
     .container {
-        width: 311px;
-        margin: 0 auto 100px;
+        width: 317px;
     }
 }
 

@@ -10,7 +10,7 @@
 
 .carouselBoxContent p {
     line-height: 1.5;
-    color: #696969;
+    color: rgb(var(--grey));
 }
 
 .carouselBoxImg {
