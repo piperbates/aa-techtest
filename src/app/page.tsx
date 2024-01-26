@@ -26,6 +26,7 @@ import more from "@/assets/icons/more.svg";
 import destinations from "@/utils/destinations";
 import blogs from "@/utils/blogs";
 import GridBox from "@/components/GridBox";
+import BlogBox from "@/components/BlogBox";
 
 export default function Home() {
   const newBlogData = blogs.map((blog)=>{
@@ -126,7 +127,7 @@ export default function Home() {
     <Section>
       <Carousel title="Blog" subtitle="Alternative adventures">
         {newBlogData.map((blog, i)=>
-          <CarouselBox title={blog.title} content={blog.category} img={blog.mobileImg.src} key={i} />
+          <BlogBox title={blog.title} content={blog.category} img={blog.mobileImg.src} key={i} />
         )}
       </Carousel>
     </Section>

@@ -14,12 +14,37 @@
     margin-bottom: 20px;
 }
 
-.carouselScroll {
+.carouselContent {
     display: flex;
-    overflow-y: scroll;
-    gap: 16px;
+    width: 100%;
+    overflow-x: scroll;
 }
 
+.carouselScroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: visible;
+
+}
+
+/* Tablet */
+
+@media screen and (min-width: 701px) and (max-width: 1120px) 
+{
+
+    .carouselScroll {
+        gap: 32px;
+    }
+
 .carouselScroll div {
-    width: 270px;
+    width: 330px;
+}
+}
+
+
+/* Mobile */
+@media screen and (max-width: 700px) { 
+.carouselScroll div {
+    width: 260px;
+}
 }

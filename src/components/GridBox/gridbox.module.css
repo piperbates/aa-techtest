@@ -3,7 +3,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 56px;
 }
 
 .gridBoxContent {
@@ -25,7 +25,8 @@
 .gridBoxGrid {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+
 }
 
 .gridBoxItem {
@@ -42,6 +43,7 @@
 
 .gridBoxItem p {
     font-size: 14px;
+    width: 100px;
 }
 
 .gridBoxIcon {
@@ -61,4 +63,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 700px) {  
+
+    .gridBox {
+    padding: 30px;
+    }
+    .gridBoxGrid {
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
 }
