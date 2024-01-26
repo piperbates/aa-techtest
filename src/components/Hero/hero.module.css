@@ -9,6 +9,15 @@
     padding: 40px 0;
 }
 
+.bookingFormDetails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+
+.hero h1 {
+    margin-bottom: 16px;
+}
+
 .heroContent {
     padding: 0 32px;
     display: flex;
@@ -37,7 +46,7 @@
 }
 
 .bookingForm {
-    margin: 40px 0;
+    margin: 40px 0 0 0;
     background-color: white;
     width: 100%;
     padding: 16px;
@@ -46,9 +55,6 @@
 }
 
 .bookingFormHeader {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
     margin-bottom: 16px;
 }
 
@@ -76,7 +82,6 @@
 
 .formBox {
     border: 1px solid #E6E9F0;
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,6 +109,20 @@
     text-align: right;
 }
 
+.bookingFormAddCity {
+    background-color: #E6E9F0;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    margin: 14px;
+}
+
+.directFlightsToggle label {
+    color: gray;
+    margin: 12px;
+    font-size: 14px;
+}
 
 
 /* Tablet */
@@ -118,9 +137,61 @@
     font-size: 32px;
   } 
 
-  .hero p {
-    font-size: 16px;
+  .bookingFormHeader {
+    display: flex;
+    justify-content: space-between;
   }
+
+  .mainButtons {
+    display: flex;
+    width: 50%;
+    gap: 16px;
+  }
+
+  .bookingFormDetails {
+    display: block;
+  }
+
+  .bookingFormDestinations, .bookingFormExtraDetails {
+    display: flex;
+  }
+
+  .bookingFormDestinations .formBox:first-of-type {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .bookingFormDestinations .formBox:last-of-type::after {
+    content: url("../../assets/icons/swap.svg");
+    border: 1px solid #E6E9F0;
+    border-radius: 50px;
+    background-color: white;
+    width: 30px; height: 30px;
+    justify-content: center;
+    display: flex;
+    position: relative; 
+    left: -33px;
+    top: -25%;
+    padding: 3px;
+    box-sizing: border-box;
+  }
+
+  .bookingFormDestinations .formBox:last-of-type {
+    border-radius: 0 10px 10px  0;
+  }
+  
+  .bookingFormExtraDetails div, .bookingFormDestinations div {
+    width: 100%;
+  }
+
+  .bookingFormExtraDetails {
+    gap: 8px;
+  }
+
+  .bookingFormExtraDetails div {
+    border-radius: 10px;
+  }
+
+
 }
 
 /* Mobile */
@@ -130,6 +201,28 @@
   font-style: normal;
   font-size: 24px;
 }
+
+.mainButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.bookingFormDetails, .bookingFormDestinations {
+    display: block;
+}
+
+.directFlightsToggle {
+    display: none;
+}
+
+.formBox {
+    border-radius: 8px;
+
+}
+
 }
 
 
