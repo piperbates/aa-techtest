@@ -64,6 +64,8 @@ const FormContent = ({formType}: {formType?: string}) => {
 const Hero = () => {
     const [formType, setFormType] = useState(formTypes.RETURN);
 
+    const [directFlights, setDirectFlights] = useState(false);
+
     switch(formType) {
         case formTypes.RETURN:
             <p>Return</p>
@@ -76,8 +78,13 @@ const Hero = () => {
         case formTypes.MULTICITY:
             <p>Multi-city</p>
             break;
-
     }
+
+    const handleToggle = () => {
+        setDirectFlights(!directFlights);
+        //this will eventually change the search results, not currently in this scope though
+    }
+
     return (
     <div className={styles.hero}>
         <div className={styles.heroContent}>
@@ -106,7 +113,15 @@ const Hero = () => {
         </div>
 
                 <div className={styles.directFlightsToggle}>
-                    <label htmlFor="directFlight">Direct flights only</label><input type="checkbox" name="directFlight" />
+                    <label htmlFor="directFlight">Direct flights only
+                        <input 
+                            type="checkbox" 
+                            id="directFlight" 
+                            className={styles.toggle} 
+                            onChange={()=>handleToggle()}
+                        />
+                    <div className={styles.slider}></div>
+                    </label>
                 </div>
             </div>
 

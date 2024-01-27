@@ -1,4 +1,6 @@
-
+.carousel {
+    height: 450px;
+}
 
 .carousel h2 {
     color: blue;
@@ -15,14 +17,14 @@
 .carouselContent {
     display: flex;
     width: 100%;
-    overflow-x: scroll;
 }
 
 .carouselScroll {
+    position: absolute;
+    width: 100%;
     display: flex;
     gap: 16px;
-    overflow-x: visible;
-
+    overflow-x: scroll;
 }
 
 /* Tablet */
@@ -32,9 +34,6 @@
         text-align: left;
     }
 
-    .carouselScroll {
-        gap: 32px;
-    }
 
 .carouselScroll div {
     width: 330px;
@@ -45,6 +44,6 @@
 /* Mobile */
 @media screen and (max-width: 700px) { 
 .carouselScroll div {
-    width: 260px;
+    width: 300px;
 }
 }

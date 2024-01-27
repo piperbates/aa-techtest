@@ -139,6 +139,52 @@
     justify-content: space-between;
 }
 
+/* Direct Flights Toggle*/
+
+.directFlightsToggle label {
+  display: flex; 
+  font-size: 14px;
+  align-items: center;
+}
+
+.toggle {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  margin-left: 8px;
+  position: relative;
+  cursor: pointer;
+  background-color: #BDBFC6;
+  width: 50px; height: 25px;
+  border-radius: 25px;
+  transition: .4s;
+
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 4px;
+  height: 18px; width: 19px;
+  background-color: white;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.directFlightsToggle input:checked + .slider {
+  background-color: #005AA9;
+}
+
+
+.directFlightsToggle input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+
 .formSubText {
     text-align: right;
 }
@@ -151,13 +197,6 @@
     font-size: 14px;
     margin: 14px;
 }
-
-.directFlightsToggle label {
-    color: gray;
-    margin: 12px;
-    font-size: 14px;
-}
-
 
 .bookingFormDestinations .formBox:last-of-type::after {
   content: url("../../assets/icons/swap.svg");

@@ -29,7 +29,7 @@ const CallToActionBox = (
 
                 <div className={styles.callToActionImgBox}>
                     <div className={`${styles.callToActionImg}  ${styles.bnpl}`}>
-                        <Image src={bnpl} alt="buy now pay later" fill objectFit="contain" />
+                        <Image src={bnpl} alt="buy now pay later" fill object-fit="contain" />
                     </div>
                     <div className={`${styles.callToActionImg} ${styles.cATimg1}`}>
                         <Image src={klarna} alt="klarna" fill />
