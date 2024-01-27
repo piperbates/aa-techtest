@@ -1,5 +1,6 @@
 .carousel {
     height: 450px;
+    width: 100%;
 }
 
 .carousel h2 {
@@ -20,11 +21,18 @@
 }
 
 .carouselScroll {
+    width: 2000px;
+    height: 350px;
     position: absolute;
-    width: 100%;
     display: flex;
     gap: 16px;
     overflow-x: scroll;
+    padding-right: 300px;
+
+}
+
+.carouselScroll div {
+    border-radius: 0 0 16px 16px;
 }
 
 /* Tablet */
@@ -34,16 +42,18 @@
         text-align: left;
     }
 
+    .carouselScroll {
+        width: 1000px; /* This allows for the scroll to work*/
+        gap: 36px;
+    }
 
-.carouselScroll div {
-    width: 330px;
-}
 }
 
 
 /* Mobile */
 @media screen and (max-width: 700px) { 
-.carouselScroll div {
-    width: 300px;
-}
+    .carouselScroll {
+        width: 450px; /* This allows for the scroll to work*/
+        gap: 16px;
+    }
 }

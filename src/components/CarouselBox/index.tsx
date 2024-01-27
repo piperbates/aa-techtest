@@ -5,9 +5,8 @@ import Box from "../Box";
 
 const CarouselBox = (
     {title, content, img}: {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-        
-        title: string, content:string, img:string
-    }) => <Box>
+       title: string, content:string, img:string
+    }) => <div className={styles.carouselBoxWrapper}>
                 <div className={styles.carouselBoxImg}>
                     <Image src={img} alt={title} fill />
                 </div>
@@ -15,6 +14,6 @@ const CarouselBox = (
                     <h3>{title}</h3>
                     <p>{content}</p>
                 </div>
-        </Box>
+            </div>
 
 export default CarouselBox

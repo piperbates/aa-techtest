@@ -1,5 +1,6 @@
 .carouselBoxContent {
-    padding: 40px;
+    padding: 24px;
+    background-color: white;
 }
 
 .carouselBoxContent h3 {
@@ -21,4 +22,22 @@
 
 .carouselBoxImg img {
     border-radius: 16px 16px 0 0;
+    object-fit: cover;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1120px) {
+
+    .carouselBoxWapper div {
+        width: 380px;
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+    .carouselBoxWapper div {
+        width: 330px;
+    }
 }

@@ -6,7 +6,6 @@ import Section from "@/components/Section";
 import CallToActionBox from "@/components/CallToActionBox";
 import Carousel from "@/components/Carousel";
 import CarouselBox from "@/components/CarouselBox";
-import Box from "@/components/Box";
 
 
 // SVGs
@@ -127,7 +126,7 @@ export default function Home() {
     <Section>
       <Carousel title="Blog" subtitle="Alternative adventures">
         {newBlogData.map((blog, i)=>
-          <BlogBox title={blog.title} content={blog.category} img={blog.mobileImg.src} key={i} />
+          <BlogBox title={blog.title} content={blog.category} img={blog.desktopImg.src} key={i} />
         )}
       </Carousel>
     </Section>
