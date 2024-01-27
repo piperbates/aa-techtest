@@ -1,0 +1,26 @@
+.section {
+    display: flex;
+    gap: 16px;
+    width: 1120px;
+    margin: 80px auto;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1120px) {
+    .section {
+        margin: 40px 0;
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) { 
+    .section {
+        width: 100%;
+        margin: 20px 0;
+        flex-direction: column;
+
+    }
+}

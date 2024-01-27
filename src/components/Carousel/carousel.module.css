@@ -1,0 +1,50 @@
+
+
+.carousel h2 {
+    color: blue;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.carousel h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.carouselContent {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.carouselScroll {
+    display: flex;
+    gap: 16px;
+    overflow-x: visible;
+
+}
+
+/* Tablet */
+
+@media screen and (max-width: 1120px) {
+    .carousel {
+        text-align: left;
+    }
+
+    .carouselScroll {
+        gap: 32px;
+    }
+
+.carouselScroll div {
+    width: 330px;
+}
+}
+
+
+/* Mobile */
+@media screen and (max-width: 700px) { 
+.carouselScroll div {
+    width: 260px;
+}
+}

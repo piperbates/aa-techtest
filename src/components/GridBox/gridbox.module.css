@@ -1,0 +1,115 @@
+.gridBoxWrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    height: 442px;
+}
+
+.gridBox {
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    padding: 56px;
+    display: inline;
+}
+
+.gridBoxImage {
+    position: relative;
+    width: 294px;
+    height: 600px;
+    margin: 50px;
+    top: 20px;
+}
+
+.gridBoxContent {
+    margin-bottom: 28px;
+}
+
+.gridBox h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+.gridBox p {
+    font-size: 16px;
+    color: rgb(var(--grey));
+    line-height: 1.5;
+}
+
+.gridBoxGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+
+}
+
+.gridBoxItem {
+    background-color: rgb(var(--background-rgb));
+    height: 100px;
+    margin: 4px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+}
+
+.gridBoxItem p {
+    font-size: 14px;
+    width: 100px;
+}
+
+.gridBoxIcon {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.recommendedBox {
+    background: rgb(58, 185, 136);
+    width: 150px; height: 40px;
+    position: relative;
+    left: -380px;
+    color: white;
+    border-radius: 0 0 16px 16px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Tablet */
+@media screen and (max-width: 1120px) {
+    .gridBoxWrapper {
+        
+    overflow-y: unset;
+    height: auto;
+    }
+    .gridBox {
+        display: flex;
+    }
+
+    .gridBoxImage {
+        display: none;
+    }
+
+    .recommendedBox {
+        position: relative;
+        top: 0px; left: 0px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {  
+
+    .gridBox {
+    padding: 30px;
+    }
+    .gridBoxGrid {
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+}

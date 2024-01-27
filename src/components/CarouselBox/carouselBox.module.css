@@ -1,0 +1,24 @@
+.carouselBoxContent {
+    padding: 40px;
+}
+
+.carouselBoxContent h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.carouselBoxContent p {
+    line-height: 1.5;
+    color: rgb(var(--grey));
+}
+
+.carouselBoxImg {
+    position: relative;
+    width: 100%;
+    height: 260px;
+}
+
+.carouselBoxImg img {
+    border-radius: 16px 16px 0 0;
+}

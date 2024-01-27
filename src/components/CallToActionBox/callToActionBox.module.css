@@ -1,0 +1,209 @@
+.callToActionBox {
+    display: flex;
+    text-align: left;
+    overflow: hidden;
+    height: 442px;
+}
+
+.callToActionBox button {
+    position:relative;
+}
+
+.callToActionBox h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.callToActionBox p {
+    font-size: 16px;
+    color: rgb(var(--grey));
+     line-height: 24px;
+}
+
+.callToActionImgBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    height: auto;
+    margin: 50px 100px 0;
+}
+
+.callToActionImg {
+    position: relative;
+}
+
+.ctaContent {
+    padding: 56px;
+    width: 560px;
+}
+
+.ctaButton {
+    width: 235px;
+}
+
+.ctaContent ul {
+    display: block;
+    margin: 40px 0;
+    list-style: none;
+}
+
+.ctaContent li {
+    font-size: 16px;
+    color: rgb(var(--grey));
+    margin-bottom: 16px;
+}
+
+.ctaContent li::before{
+    content: '✓';
+    font-size: 12px;
+    text-align: center;
+    padding: 2px;
+    background-color: #10B981;
+    border-radius: 100%;
+    height: 22px;
+    width: 22px;
+    color: white;
+    position: relative;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+
+.cATimg1 {
+    width: 56px;
+    height: 56px;
+    top: 330px;
+    left: -100px;
+}
+
+.cATimg2 {
+    z-index: 0;
+    width: 48px;
+    height: 48px;
+    left: -230px;
+    top: 260px;
+}
+
+.cATimg3 {
+    width: 40px;
+    height: 40px;
+    left: 150px;
+    top: 190px;
+}
+
+.cATimg4 {
+    width: 56px;
+    height: 56px;
+    top: 100px;
+    left: 45px;
+}
+
+.bnpl {
+    z-index: 1;
+    position: relative;
+    width: 294px;
+    height: 600px;
+    top: 0px;
+    left: 0px;
+}
+
+
+/* Tablet */
+
+@media screen and (max-width: 1120px) {
+    .ctaContent {
+        width: 475px;
+    }
+
+    .callToActionImgBox {
+        margin: 0;
+    }
+
+    
+.cATimg1 {
+    top: 370px;
+    left: -84px;
+}
+
+.cATimg2 {
+    z-index: 0;
+    top: 100px;
+    left: -60px;
+}
+
+.cATimg3 {
+    top: 80px;
+    left: 30px;
+}
+
+.cATimg4 {
+    top: 200px;
+    left: 30px;
+}
+
+.bnpl {
+    z-index: 1;
+    position: relative;
+    width: 196px;
+    height: 400px;
+    top: 140px;
+    left: 0px;
+}
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+
+    .callToActionBox {
+        overflow: hidden;
+        display: block;
+        text-align: center;
+        padding: 40px 36px;
+        height: auto;
+    }
+
+    .ctaButton {
+        position: relative;
+        top: 10px;
+        
+    }
+
+    .ctaContent {
+        width: unset;
+        padding: 0;
+    }
+
+    .ctaContent ul {
+        display: none;
+    }
+
+    .callToActionBox button {
+        top:65px;
+    }
+
+    .bnpl {
+        display: none;
+    }
+
+    .cATimg1 {
+        top: -50px;
+        left: -45px;
+    }
+
+    .cATimg2 {
+        top: -30px;
+        left: 0px;
+
+    }
+
+    .cATimg3 {
+        left: 30px;
+        top: -50px;
+    }
+
+    .cATimg4 {
+        left: 68px;
+        top: -30px;
+    }
+}

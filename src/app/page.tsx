@@ -1,95 +1,139 @@
-import Image from "next/image";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 import styles from "./page.module.css";
+import InfoBox from "@/components/InfoBox";
+import Section from "@/components/Section";
+import CallToActionBox from "@/components/CallToActionBox";
+import Carousel from "@/components/Carousel";
+import CarouselBox from "@/components/CarouselBox";
+import Box from "@/components/Box";
+
+
+// SVGs
+
+import search from "@/assets/icons/search.svg";
+import choice from "@/assets/icons/choice.svg";
+import service from "@/assets/icons/service.svg";
+
+import illness from "@/assets/icons/illness.svg";
+import weather from "@/assets/icons/weather.svg";
+import refundable from "@/assets/icons/refundable.svg";
+import emergency from "@/assets/icons/emergency.svg";
+import breakdown from "@/assets/icons/breakdown.svg";
+import more from "@/assets/icons/more.svg";
+
+// Images
+import destinations from "@/utils/destinations";
+import blogs from "@/utils/blogs";
+import GridBox from "@/components/GridBox";
+import BlogBox from "@/components/BlogBox";
 
 export default function Home() {
+  const newBlogData = blogs.map((blog)=>{
+    if(blog.title.length > 54) {
+      return {
+        title: `${blog.title.slice(0, 54)}...`, 
+        category: blog.category, 
+        desktopImg: blog.desktopImg, 
+        mobileImg: blog.mobileImg  }
+    } else {
+      return blog
+    }
+  })
+
+  const grid = [
+    {
+      name: "Illness",
+      icon: illness.src
+    },
+    {
+      name: "Weather",
+      icon: weather.src
+    },
+    {
+      name: "Refundable Booking",
+      icon: refundable.src
+    },
+    {
+      name: "Emergency",
+      icon: emergency.src
+    },
+    {
+      name: "Mechanical Breakdown",
+      icon: breakdown.src
+    },
+    {
+      name: "Plus much much more",
+      icon: more.src
+    },
+  ]
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
+    <>
+    <Header />
+    <Hero />
+
+    <div className={styles.container}>
+    <Section>
+      <InfoBox icon={search.src}>
         <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+          <h2>Simple Search</h2>
+          <p>Easily search and book flights from anywhere in the world</p>
         </div>
-      </div>
+      </InfoBox>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <InfoBox icon={choice.src}>
+        <div>
+          <h2>Unlimited choice</h2>
+          <p>Find the flight you were looking for and pay on your terms</p>
+        </div>
+      </InfoBox>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <InfoBox icon={service.src}>
+          <h2>Expert customer service</h2>
+          <p>Dedicated customer support team once you have booked</p>
+      </InfoBox>
+    </Section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+    <Section>
+      <CallToActionBox callToAction="Browse payment methods" image={service.src}>
+        <h2>Buy now, pay later</h2>
+        <p>Book your flights today and spread the cost over time with one of our installment options.</p>
+        <ul>
+          <li>Make payments weekly or monthly</li>
+          <li>Interest free options</li>
+          <li>Fast approval</li>
+        </ul>
+      
+      </CallToActionBox>
+    </Section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+    <Section>
+      <Carousel subtitle="Exploring Australia">
+          {destinations.map((destination, i)=>{
+            return <CarouselBox 
+                      title={destination.city} 
+                      content={destination.country} 
+                      img={destination.image.src} 
+                      key={i} />
+          })}
+        </Carousel>
+    </Section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <Section>
+        <GridBox title="Cancellation protection" content="During these uncertain times we recommend adding Cancellation protection to your booking" grid={grid} recommended />
+    </Section>
+
+    <Section>
+      <Carousel title="Blog" subtitle="Alternative adventures">
+        {newBlogData.map((blog, i)=>
+          <BlogBox title={blog.title} content={blog.category} img={blog.mobileImg.src} key={i} />
+        )}
+      </Carousel>
+    </Section>
+
+   
+    </div>
+    </>
   );
 }
