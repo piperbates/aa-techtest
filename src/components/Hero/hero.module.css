@@ -169,7 +169,7 @@
   display: flex;
   position: relative; 
   left: -33px;
-  top: -25%;
+  top: -25px;
   padding: 3px;
   box-sizing: border-box;
 }
@@ -181,6 +181,10 @@
 
 .bookingFormDestinations .formBox:last-of-type {
   border-radius: 0 10px 10px 0;
+  height: 74px;
+  justify-content: center;
+  display: flex;
+  padding-top: 30px;
 }
 
 
@@ -207,21 +211,6 @@
 
   .bookingFormDestinations, .bookingFormExtraDetails {
     display: flex;
-  }
-
-  .bookingFormDestinations .formBox:last-of-type::after {
-    content: url("../../assets/icons/swap.svg");
-    border: 1px solid #E6E9F0;
-    border-radius: 50px;
-    background-color: white;
-    width: 30px; height: 30px;
-    justify-content: center;
-    display: flex;
-    position: relative; 
-    left: -33px;
-    top: -25%;
-    padding: 3px;
-    box-sizing: border-box;
   }
 
   .bookingFormDestinations .formBox:last-of-type {
