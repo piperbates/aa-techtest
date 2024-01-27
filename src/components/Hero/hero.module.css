@@ -44,6 +44,7 @@
 
 .trustScoreText p {
     padding: 0 16px;
+    font-size: 14px;
 }
 
 .trustScoreText p:first-child {
@@ -62,6 +63,10 @@
 
 .bookingForm p {
   font-size: 14px;
+}
+
+.formBoxHeader p {
+  font-size: 10px;
 }
 
 .bookingFormHeader {
@@ -106,7 +111,7 @@
     justify-content: center;
     align-items: flex-start;
     align-self: stretch;
-    margin: 8px 0;
+    margin: 0 0 8px 0;
     padding: 16px;
     width: 50%;
 }
@@ -188,8 +193,8 @@
 }
 
 /* Tablet */
-@media screen and (min-width: 701px) and (max-width: 1120px) 
-{
+@media screen and (max-width: 1120px) {
+
   .mainButtons {
     display: flex;
     width: 50%;
@@ -226,9 +231,6 @@
   .bookingFormExtraDetails div, .bookingFormDestinations div {
     width: 100%;
   }
-
-
-
 }
 
 /* Mobile */
@@ -237,6 +239,10 @@
   .hero {
     padding: 40px;
   }
+
+  .heroContent {
+    padding: 0;
+  }
   
 .hero h1 {
   font-style: normal;
@@ -244,15 +250,14 @@
 }
 
 .mainButtons {
-    display: flex;
     flex-direction: row;
     gap: 8px;
-    margin-bottom: 16px;
     width: 100%;
 }
 
 .bookingFormDetails, .bookingFormDestinations {
     display: block;
+    width: 100%;
 }
 
 .directFlightsToggle {
@@ -264,10 +269,17 @@
   border-radius: 8px;
 }
 
+.bookingFormDestinations .formBox:first-of-type {
+  border-radius: 8px;
+}
+
+.bookingFormDestinations .formBox:last-of-type {
+  border-radius: 8px;
+}
+
 .bookingFormExtraDetails {
   display: block;
 }
-
 
 .bookingFormDestinations .formBox:last-of-type::after {
   content: none;

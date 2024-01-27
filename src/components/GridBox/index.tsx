@@ -3,6 +3,8 @@ import Box from "../Box";
 import styles from './gridbox.module.css';
 import Image from "next/image";
 
+import cpProtect from "@/assets/images/cp-mobile.png";
+
 const GridItem = ({image, title}: {image: string, title: string}) => {
     return <div className={styles.gridBoxItem}>
         <div className={styles.gridBoxIcon}>
@@ -19,16 +21,22 @@ const GridBox = ({title, content, recommended, grid}: {title: string, content: s
     return (
     <Box>
         {recommended ? (<div className={styles.recommendedBox}><p>Recommended</p></div>) : <></>}
-        <div className={styles.gridBox}>
-            <div className={styles.gridBoxContent}>
-                <h2>{title}</h2>
-               <p>{content}</p>
+        
+        <div className={styles.gridBoxWrapper}>
+            <div className={styles.gridBoxImage}>
+                    <Image src={cpProtect} alt="mobile" fill />
             </div>
+            <div className={styles.gridBox}>
+                <div className={styles.gridBoxContent}>
+                    <h2>{title}</h2>
+                    <p>{content}</p>
+                </div>
 
-            <div className={styles.gridBoxGrid}>
-                {grid.map((item, i)=>
-                    <GridItem title={item.name} image={item.icon} key={i} />
-                )}
+                <div className={styles.gridBoxGrid}>
+                    {grid.map((item, i)=>
+                        <GridItem title={item.name} image={item.icon} key={i} />
+                    )}
+                </div>
             </div>
         </div>
     </Box>

@@ -1,9 +1,24 @@
+.gridBoxWrapper {
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    height: 442px;
+}
+
 .gridBox {
     position: relative;
     align-items: center;
-    display: flex;
     flex-direction: column;
     padding: 56px;
+    display: inline;
+}
+
+.gridBoxImage {
+    position: relative;
+    width: 294px;
+    height: 600px;
+    margin: 50px;
+    top: 20px;
 }
 
 .gridBoxContent {
@@ -57,6 +72,7 @@
     background: rgb(58, 185, 136);
     width: 150px; height: 40px;
     position: relative;
+    left: -380px;
     color: white;
     border-radius: 0 0 16px 16px;
     margin: auto;
@@ -65,6 +81,27 @@
     justify-content: center;
 }
 
+
+/* Tablet */
+@media screen and (max-width: 1120px) {
+    .gridBoxWrapper {
+        
+    overflow-y: unset;
+    height: auto;
+    }
+    .gridBox {
+        display: flex;
+    }
+
+    .gridBoxImage {
+        display: none;
+    }
+
+    .recommendedBox {
+        position: relative;
+        top: 0px; left: 0px;
+    }
+}
 
 /* Mobile */
 @media screen and (max-width: 700px) {  

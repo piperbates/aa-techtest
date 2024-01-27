@@ -7,7 +7,7 @@
 
 /* Tablet */
 
-@media screen and (min-width: 701px) and (max-width: 1120px) {
+@media screen and (max-width: 1120px) {
     .section {
         margin: 40px 0;
         width: 100%;
@@ -19,7 +19,7 @@
 @media screen and (max-width: 700px) { 
     .section {
         width: 100%;
-        margin: 40px 0;
+        margin: 20px 0;
         flex-direction: column;
 
     }
