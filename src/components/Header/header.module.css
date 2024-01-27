@@ -9,7 +9,28 @@
     background-color: white;
     display: inline-flex;
     align-items: center;
-    padding: 32px 0;
+    padding: 32px 160px;
+}
+
+.navigationList ul {
+    display: inline-flex;
+    list-style: none;
+    gap: 16px;
+}
+
+.navigationList li {
+    margin-left: 40px;
+    font-size: 14px;
+}
+
+.navigationList li:last-child {
+    position: absolute;
+    right: 200px;
+}
+
+.moreNav::after {
+    content: "\25be";
+    margin-left: 5px;
 }
 
 .aaLogoWrapper {
@@ -17,12 +38,21 @@
 }
 
 .aaLogoWrapper {
-    width: 106px;
-    height: 32px;
+    width: 132px;
+    height: 40px;
 }
 
 /* Tablet */
 @media screen and (max-width: 1120px) {
+
+    .aaLogoWrapper {
+        width: 106px;
+        height: 32px;
+    }
+    
+    .navigationList {
+        display: none;
+    }
     .header {
         width: 100%;
         justify-content: space-between;

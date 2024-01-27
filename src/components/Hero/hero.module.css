@@ -6,16 +6,22 @@
     background-position: center;
     background-size: cover;
     background-image: url("../../assets/images/background-image.jpg");
-    padding: 40px 0;
+    padding: 80px 0;
+}
+
+.heroContent p {
+  font-size: 16px;
 }
 
 .bookingFormDetails {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
-}
+  }
 
 .hero h1 {
     margin-bottom: 16px;
+    font-style: normal;
+    font-size: 32px;
 }
 
 .heroContent {
@@ -54,8 +60,14 @@
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.16);
 }
 
+.bookingForm p {
+  font-size: 14px;
+}
+
 .bookingFormHeader {
     margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .bookingFormHeader button {
@@ -67,6 +79,13 @@
     align-items: center;
     flex: 1 0 0;
 }
+
+.mainButtons {
+  display: flex;
+  width: 30%;
+  gap: 16px;
+}
+
 
 .selectedFormType {
     background-color: #005AA9;
@@ -89,6 +108,16 @@
     align-self: stretch;
     margin: 8px 0;
     padding: 16px;
+    width: 50%;
+}
+
+
+.bookingFormDestinations, .bookingFormExtraDetails {
+  display: flex;
+}
+
+.bookingFormDestinations {
+  margin-right: 8px;
 }
 
 .formBoxTitle, .formSubText {
@@ -125,23 +154,42 @@
 }
 
 
+.bookingFormDestinations .formBox:last-of-type::after {
+  content: url("../../assets/icons/swap.svg");
+  border: 1px solid #E6E9F0;
+  border-radius: 50px;
+  background-color: white;
+  width: 30px; height: 30px;
+  justify-content: center;
+  display: flex;
+  position: relative; 
+  left: -33px;
+  top: -25%;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+
+.bookingFormDestinations .formBox:first-of-type {
+  border-radius: 10px 0 0 10px;
+}
+
+.bookingFormDestinations .formBox:last-of-type {
+  border-radius: 0 10px 10px 0;
+}
+
+
+.bookingFormExtraDetails {
+  gap: 8px;
+}
+
+.bookingFormExtraDetails div {
+  border-radius: 10px;
+}
+
 /* Tablet */
 @media screen and (min-width: 701px) and (max-width: 1120px) 
 {
-  .hero {
-    padding: 80px 0;
-  }
-
-  .hero h1 {
-    font-style: normal;
-    font-size: 32px;
-  } 
-
-  .bookingFormHeader {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .mainButtons {
     display: flex;
     width: 50%;
@@ -154,10 +202,6 @@
 
   .bookingFormDestinations, .bookingFormExtraDetails {
     display: flex;
-  }
-
-  .bookingFormDestinations .formBox:first-of-type {
-    border-radius: 10px 0 0 10px;
   }
 
   .bookingFormDestinations .formBox:last-of-type::after {
@@ -183,19 +227,16 @@
     width: 100%;
   }
 
-  .bookingFormExtraDetails {
-    gap: 8px;
-  }
-
-  .bookingFormExtraDetails div {
-    border-radius: 10px;
-  }
 
 
 }
 
 /* Mobile */
 @media screen and (max-width: 700px) {
+
+  .hero {
+    padding: 40px;
+  }
   
 .hero h1 {
   font-style: normal;
@@ -219,10 +260,18 @@
 }
 
 .formBox {
-    border-radius: 8px;
-
+  width: unset;
+  border-radius: 8px;
 }
 
+.bookingFormExtraDetails {
+  display: block;
+}
+
+
+.bookingFormDestinations .formBox:last-of-type::after {
+  content: none;
+}
 }
 
 
