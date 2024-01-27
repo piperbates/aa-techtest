@@ -10,7 +10,7 @@
 
 /* Tablet */
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1220px) {
     .container {
         width: 740px;
         justify-content: center;

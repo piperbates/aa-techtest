@@ -49,12 +49,12 @@
 
 /* Tablet */
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1220px) {
     
 }
 
 /* Mobile */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .blogBoxContent {
     position: relative;
         background-color: white;

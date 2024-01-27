@@ -236,7 +236,7 @@
 }
 
 /* Tablet */
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1220px) {
 
   .mainButtons {
     display: flex;
@@ -262,7 +262,7 @@
 }
 
 /* Mobile */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 
   .hero {
     padding: 40px;
