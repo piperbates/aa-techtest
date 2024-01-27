@@ -7,7 +7,7 @@ const BlogBox = (
     {title, content, img}: {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
         
         title: string, content:string, img:string
-    }) => <Box>
+    }) => <div>
                 <div className={styles.blogBoxImg}>
                     <Image src={img} alt={title} fill />
                 </div>
@@ -15,6 +15,6 @@ const BlogBox = (
                     <p>{content}</p>        
                     <h3>{title}</h3>
                 </div>
-        </Box>
+        </div>
 
 export default BlogBox

@@ -8,7 +8,7 @@ const InfoBox = ({icon, children}: {icon: string, children: JSX.Element | JSX.El
     <Box>
         <div className={styles.infobox}>
             <div className={styles.infoBoxIcon}>
-                <Image src={icon} alt="icon" fill objectFit="contain" />
+                <Image src={icon} alt="icon" fill object-fit="contain" />
             </div>
             <div className={styles.infoBoxContent}>
                 {children}
