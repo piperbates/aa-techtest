@@ -14,6 +14,7 @@ const BlogBox = (
                 <div className={styles.blogBoxContent}>
                     <p>{content}</p>        
                     <h3>{title}</h3>
+                    <button>Read blog article</button>
                 </div>
         </div>
 

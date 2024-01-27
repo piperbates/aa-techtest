@@ -125,7 +125,7 @@ export default function Home() {
     </Section>
 
     <Section>
-      <Carousel title="Blog" subtitle="Alternative adventures">
+      <Carousel centered title="Blog" subtitle="Alternative adventures">
         {newBlogData.map((blog, i)=>
           <BlogBox title={blog.title} content={blog.category} img={blog.mobileImg.src} key={i} />
         )}
