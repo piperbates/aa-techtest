@@ -337,6 +337,10 @@
 .bookingFormExtraDetails {
   display: block;
 }
+
+.bookingFormDestinations div:last-child p {
+  transform: none;
+}
 }
 
 

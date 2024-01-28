@@ -147,17 +147,17 @@
 
 .cATimg2 {
     z-index: 0;
-    top: 100px;
+    top: 120px;
     left: -60px;
 }
 
 .cATimg3 {
-    top: 80px;
+    top: 100px;
     left: 30px;
 }
 
 .cATimg4 {
-    top: 200px;
+    top: 220px;
     left: 30px;
 }
 
@@ -166,7 +166,7 @@
     position: relative;
     width: 196px;
     height: 400px;
-    top: 140px;
+    top: 160px;
     left: 0px;
 }
 
