@@ -75,6 +75,7 @@
     height: 56px;
     top: 330px;
     left: -100px;
+    transition: .4s;
 }
 
 .cATimg2 {
@@ -83,13 +84,21 @@
     height: 48px;
     left: -230px;
     top: 260px;
+    transition: .4s;
 }
+
+
+.callToActionBox:hover .cATimg2, .callToActionBox:hover .cATimg1 {
+    transform: translate(-10px, -15px);
+}
+
 
 .cATimg3 {
     width: 40px;
     height: 40px;
     left: 150px;
     top: 190px;
+    transition: .4s;
 }
 
 .cATimg4 {
@@ -97,6 +106,12 @@
     height: 56px;
     top: 100px;
     left: 45px;
+    transition: .4s;
+}
+
+
+.callToActionBox:hover .cATimg4, .callToActionBox:hover .cATimg3 {
+    transform: translate(10px, -5px);
 }
 
 .bnpl {
@@ -106,8 +121,12 @@
     height: 600px;
     top: 0px;
     left: 0px;
+    transition: .4s;
 }
 
+.callToActionBox:hover .bnpl {
+    transform: scale(1.05) translate(0, 13px);
+}
 
 /* Tablet */
 
@@ -150,6 +169,11 @@
     top: 140px;
     left: 0px;
 }
+
+.callToActionBox:hover .cATimg4, .callToActionBox:hover .cATimg3, .callToActionBox:hover .cATimg2, .callToActionBox:hover .cATimg1, .callToActionBox:hover .bnpl {
+    transform: none;
+}
+
 }
 
 /* Mobile */

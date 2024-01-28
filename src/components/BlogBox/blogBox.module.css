@@ -22,11 +22,7 @@
     border-radius: 16px;
     position: absolute;
     bottom: 0px;
-}
-
-.blogBoxContent button:hover {
-    background-color: white;
-    color: unset;
+    transition: 0.2s;
 }
 
 
@@ -45,6 +41,12 @@
 .blogBoxImg img {
     border-radius: 16px;
 }
+
+.blogBoxWrapper:hover .blogBoxContent button {
+    background-color: white;
+    color: unset;
+}
+
 
 
 /* Tablet */

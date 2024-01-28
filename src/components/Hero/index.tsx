@@ -39,6 +39,7 @@ const FormContent = ({formType}: {formType?: string}) => {
                     <FormBox boxTitle="Dates" info="Sat 11 Jun - Sat 25 Jun" subText="14 Nights" />
                     <FormBox boxTitle="Passengers" info="2 Adults, Any class" />         
                 </div>
+                
             </div>
         case "one way":
             return <div className={styles.bookingFormDetails}>
@@ -105,13 +106,11 @@ const Hero = () => {
 
         <div className={styles.bookingForm}> 
             <div className={styles.bookingFormHeader}>
-
-            <div className={styles.mainButtons}>
-                <FormButton selected title="Return" onClick={()=>{setFormType(formTypes.RETURN)}} />
-                <FormButton title="One way" onClick={()=>{setFormType(formTypes.ONEWAY)}}/>
-                <FormButton title="Multi-city" onClick={()=>{setFormType(formTypes.MULTICITY)}}/>
-        </div>
-
+                <div className={styles.mainButtons}>
+                    <FormButton selected title="Return" onClick={()=>{setFormType(formTypes.RETURN)}} />
+                    <FormButton title="One way" onClick={()=>{setFormType(formTypes.ONEWAY)}}/>
+                    <FormButton title="Multi-city" onClick={()=>{setFormType(formTypes.MULTICITY)}}/>
+                </div>
                 <div className={styles.directFlightsToggle}>
                     <label htmlFor="directFlight">Direct flights only
                         <input 
@@ -125,11 +124,16 @@ const Hero = () => {
                 </div>
             </div>
 
-            <FormContent formType={formType} />
-
-            <BlueButton>
-                <span>Search flights</span>
-            </BlueButton>
+            <div className={styles.formWrapper}>
+                <div className={styles.formContentWrapper}>
+                    <FormContent formType={formType} />
+                </div>
+                <div className={styles.formButtonWrapper}>
+                    <BlueButton>
+                        <span>Search flights</span>
+                    </BlueButton>
+                </div>
+            </div>
         </div>
     </div>
 

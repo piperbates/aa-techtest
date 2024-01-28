@@ -20,22 +20,24 @@ const GridBox = ({title, content, recommended, grid}: {title: string, content: s
 }[], recommended?: boolean}) => {
     return (
     <Box>
-        {recommended ? (<div className={styles.recommendedBox}><p>Recommended</p></div>) : <></>}
-        
-        <div className={styles.gridBoxWrapper}>
-            <div className={styles.gridBoxImage}>
-                    <Image src={cpProtect} alt="mobile" fill />
-            </div>
-            <div className={styles.gridBox}>
-                <div className={styles.gridBoxContent}>
-                    <h2>{title}</h2>
-                    <p>{content}</p>
+        <div className={styles.fullWrapper}>
+            {recommended ? (<div className={styles.recommendedBox}><p>Recommended</p></div>) : <></>}
+            
+            <div className={styles.gridBoxWrapper}>
+                <div className={styles.gridBoxImage}>
+                        <Image src={cpProtect} alt="mobile" fill />
                 </div>
+                <div className={styles.gridBox}>
+                    <div className={styles.gridBoxContent}>
+                        <h2>{title}</h2>
+                        <p>{content}</p>
+                    </div>
 
-                <div className={styles.gridBoxGrid}>
-                    {grid.map((item, i)=>
-                        <GridItem title={item.name} image={item.icon} key={i} />
-                    )}
+                    <div className={styles.gridBoxGrid}>
+                        {grid.map((item, i)=>
+                            <GridItem title={item.name} image={item.icon} key={i} />
+                        )}
+                    </div>
                 </div>
             </div>
         </div>

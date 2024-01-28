@@ -19,6 +19,7 @@
     height: 600px;
     margin: 50px;
     top: 20px;
+    transition: .4s;
 }
 
 .gridBoxContent {
@@ -81,9 +82,18 @@
     justify-content: center;
 }
 
+.fullWrapper:hover .gridBoxImage {
+    transform: scale(1.05) translate(0, 13px);
+}
+
 
 /* Tablet */
 @media screen and (max-width: 1220px) {
+    
+.fullWrapper:hover .gridBoxImage {
+    transform: none;
+}
+
     .gridBoxWrapper {
         
     overflow-y: unset;
