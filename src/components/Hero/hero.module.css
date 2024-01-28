@@ -114,6 +114,7 @@
     margin: 0 0 8px 0;
     padding: 16px;
     width: 50%;
+    height: 56px;
 }
 
 
@@ -137,6 +138,21 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.formWrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+}
+
+.formContentWrapper {
+  width: 100%;
+}
+
+.formButtonWrapper {
+  height: 100%;
+  width: 200px;
 }
 
 /* Direct Flights Toggle*/
@@ -198,34 +214,17 @@
     margin: 14px;
 }
 
-.bookingFormDestinations .formBox:last-of-type::after {
-  content: url("../../assets/icons/swap.svg");
-  border: 1px solid #E6E9F0;
-  border-radius: 50px;
-  background-color: white;
-  width: 30px; height: 30px;
-  justify-content: center;
-  display: flex;
-  position: relative; 
-  left: -33px;
-  top: -25px;
-  padding: 3px;
-  box-sizing: border-box;
-}
-
-
 .bookingFormDestinations .formBox:first-of-type {
   border-radius: 10px 0 0 10px;
 }
 
 .bookingFormDestinations .formBox:last-of-type {
   border-radius: 0 10px 10px 0;
-  height: 74px;
-  justify-content: center;
-  display: flex;
-  padding-top: 30px;
 }
 
+.bookingFormDestinations div:last-child p {
+  transform: translate(2px, 9px)
+}
 
 .bookingFormExtraDetails {
   gap: 8px;
@@ -235,8 +234,29 @@
   border-radius: 10px;
 }
 
+.bookingFormDestinations div:last-child::after {
+  content:url("../../assets/icons/swap.svg");
+  border: 1px solid rgb(var(--grey));
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  top: -18px;
+  left: -28px;
+  background-color: white;
+}
+
 /* Tablet */
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1220px) {
+
+  .formBox {
+    height: 50px;
+    padding: 16px;
+  }
+
+  .formButtonWrapper {
+    width: 100%;
+  }
 
   .mainButtons {
     display: flex;
@@ -247,6 +267,11 @@
   .bookingFormDetails {
     display: block;
   }
+
+  
+.formWrapper {
+  display: block;
+}
 
   .bookingFormDestinations, .bookingFormExtraDetails {
     display: flex;
@@ -262,7 +287,11 @@
 }
 
 /* Mobile */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+
+  .bookingFormDestinations div:last-child::after {
+    display: none;
+  }
 
   .hero {
     padding: 40px;
@@ -309,8 +338,8 @@
   display: block;
 }
 
-.bookingFormDestinations .formBox:last-of-type::after {
-  content: none;
+.bookingFormDestinations div:last-child p {
+  transform: none;
 }
 }
 

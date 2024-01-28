@@ -35,15 +35,12 @@
 
 .aaLogoWrapper {
     position: relative;
-}
-
-.aaLogoWrapper {
     width: 132px;
     height: 40px;
 }
 
 /* Tablet */
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1220px) {
 
     .aaLogoWrapper {
         width: 106px;
@@ -68,7 +65,7 @@
 }
 
 /* Mobile */
-@media screen and (max-width: 700px) {    
+@media screen and (max-width: 800px) {    
     .header {
         padding: 32px;
     }

@@ -19,6 +19,7 @@
     height: 600px;
     margin: 50px;
     top: 20px;
+    transition: .4s;
 }
 
 .gridBoxContent {
@@ -41,7 +42,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
-
 }
 
 .gridBoxItem {
@@ -63,8 +63,8 @@
 
 .gridBoxIcon {
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     margin-bottom: 4px;
 }
 
@@ -81,14 +81,23 @@
     justify-content: center;
 }
 
+.fullWrapper:hover .gridBoxImage {
+    transform: scale(1.05) translate(0, 13px);
+}
+
 
 /* Tablet */
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1220px) {
+    
+.fullWrapper:hover .gridBoxImage {
+    transform: none;
+}
+
     .gridBoxWrapper {
-        
-    overflow-y: unset;
-    height: auto;
+        overflow-y: unset;
+        height: auto;
     }
+
     .gridBox {
         display: flex;
     }
@@ -97,6 +106,7 @@
         display: none;
     }
 
+
     .recommendedBox {
         position: relative;
         top: 0px; left: 0px;
@@ -104,12 +114,17 @@
 }
 
 /* Mobile */
-@media screen and (max-width: 700px) {  
+@media screen and (max-width: 800px) {  
 
     .gridBox {
     padding: 30px;
     }
     .gridBoxGrid {
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+
+    .gridBoxIcon {
+        width: 25px;
+        height: 25px;
     }
 }

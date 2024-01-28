@@ -8,6 +8,7 @@ const CarouselBox = (
         
         title: string, content:string, img:string
     }) => <Box>
+            <div className={styles.carouselBoxWrapper}>
                 <div className={styles.carouselBoxImg}>
                     <Image src={img} alt={title} fill />
                 </div>
@@ -15,6 +16,7 @@ const CarouselBox = (
                     <h3>{title}</h3>
                     <p>{content}</p>
                 </div>
+            </div>
         </Box>
 
 export default CarouselBox
