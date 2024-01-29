@@ -43,17 +43,26 @@ const FormContent = ({formType}: {formType?: string}) => {
             </div>
         case "one way":
             return <div className={styles.bookingFormDetails}>
-                <FormBox boxTitle="Where from?" info="London (LON)" />
-                <FormBox boxTitle="Where to?" info="Sydney (SYD)" />
-                <FormBox boxTitle="Dates" info="Sat 11 Jun" />
-                <FormBox boxTitle="Passengers" info="2 Adults, Any class" />         
+                        <div className={styles.bookingFormDestinations}>
+                            <FormBox boxTitle="Where from?" info="London (LON)" />
+                            <FormBox boxTitle="Where to?" info="Sydney (SYD)" />
+                        </div>
+
+                        <div className={styles.bookingFormExtraDetails}>
+                            <FormBox boxTitle="Dates" info="Sat 11 Jun" />
+                            <FormBox boxTitle="Passengers" info="2 Adults, Any class" />  
+                        </div>       
             </div>
         case "multicity":
             return <div className={styles.bookingFormDetails}>
-                <FormBox boxTitle="Passengers" info="2 Adults, Any class" />         
-                <FormBox boxTitle="Starting from?" info="London (LON)" />
-                <FormBox boxTitle="First destination" info="Sydney (SYD)" />
-                <FormBox boxTitle="Next destination" info="Sydney (SYD)" />
+                        <div className={styles.bookingFormDestinations}>
+                            <FormBox boxTitle="Passengers" info="2 Adults, Any class" />         
+                            <FormBox boxTitle="Starting from?" info="London (LON)" />
+                        </div>   
+                        <div className={styles.bookingFormExtraDetails}>
+                            <FormBox boxTitle="First destination" info="Sydney (SYD)" />
+                            <FormBox boxTitle="Next destination" info="Sydney (SYD)" />
+                        </div>
 
                 <button className={styles.bookingFormAddCity}>Add new city</button>
                 <FormBox boxTitle="Dates" info="Sat 11 Jun" />
@@ -86,6 +95,11 @@ const Hero = () => {
         //this will eventually change the search results, not currently in this scope though
     }
 
+    const check = (type: string) => type === formType
+
+    console.log(check)
+
+    
     return (
     <div className={styles.hero}>
         <div className={styles.heroContent}>
@@ -107,9 +121,9 @@ const Hero = () => {
         <div className={styles.bookingForm}> 
             <div className={styles.bookingFormHeader}>
                 <div className={styles.mainButtons}>
-                    <FormButton selected title="Return" onClick={()=>{setFormType(formTypes.RETURN)}} />
-                    <FormButton title="One way" onClick={()=>{setFormType(formTypes.ONEWAY)}}/>
-                    <FormButton title="Multi-city" onClick={()=>{setFormType(formTypes.MULTICITY)}}/>
+                    <FormButton selected={check(formTypes.RETURN)} title="Return" onClick={()=>{setFormType(formTypes.RETURN)}} />
+                    <FormButton selected={check(formTypes.ONEWAY)} title="One way" onClick={()=>{setFormType(formTypes.ONEWAY)}}/>
+                    <FormButton selected={check(formTypes.MULTICITY)} title="Multi-city" onClick={()=>{setFormType(formTypes.MULTICITY)}}/>
                 </div>
                 <div className={styles.directFlightsToggle}>
                     <label htmlFor="directFlight">Direct flights only
